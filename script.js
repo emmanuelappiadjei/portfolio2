@@ -1,48 +1,102 @@
 const routes = [...document.querySelectorAll('[data-route-panel]')];
-const links = [...document.querySelectorAll('[data-route]')];
+const routeLinks = [...document.querySelectorAll('[data-route]')];
 const nav = document.querySelector('nav');
 const menu = document.querySelector('.menu-button');
-const glow = document.querySelector('.cursor-glow');
+const trail = document.querySelector('#cursor-trail');
+
+const trailTokens = [
+  '01',
+  '10',
+  'EA',
+  '//',
+  '0x17',
+  '+',
+  '001',
+  '→',
+  '[ ]',
+  '26'
+];
 
 function showRoute(name, updateHash = true) {
-  const target = routes.find((route) => route.dataset.routePanel === name) || routes[0];
-  routes.forEach((route) => route.classList.toggle('active', route === target));
-  document.querySelectorAll('.nav-link').forEach((link) => link.classList.toggle('active', link.dataset.route === target.dataset.routePanel));
+  const target =
+    routes.find((panel) => panel.dataset.routePanel === name) ||
+    routes[0];
+
+  routes.forEach((panel) => {
+    panel.classList.toggle('active', panel === target);
+  });
+
+  document.querySelectorAll('.nav-link').forEach((link) => {
+    link.classList.toggle(
+      'active',
+      link.dataset.route === target.dataset.routePanel
+    );
+  });
+
   nav.classList.remove('open');
   menu.setAttribute('aria-expanded', 'false');
-  if (updateHash) history.pushState(null, '', `#${target.dataset.routePanel}`);
-  window.scrollTo({ top: 0, behavior: 'instant' });
+
+  if (updateHash) {
+    history.pushState(null, '', `#${target.dataset.routePanel}`);
+  }
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'instant'
+  });
 }
 
-links.forEach((link) => link.addEventListener('click', (event) => {
-  const name = link.dataset.route;
-  if (!name) return;
-  event.preventDefault();
-  showRoute(name);
-}));
+routeLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    showRoute(link.dataset.route);
+  });
+});
 
 menu.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  menu.setAttribute('aria-expanded', String(open));
+  const isOpen = nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded', String(isOpen));
 });
 
-window.addEventListener('popstate', () => showRoute(location.hash.slice(1) || 'home', false));
-window.addEventListener('mousemove', (event) => {
-  glow.style.left = `${event.clientX}px`;
-  glow.style.top = `${event.clientY}px`;
+window.addEventListener('popstate', () => {
+  showRoute(location.hash.slice(1) || 'home', false);
 });
 
-document.querySelectorAll('.work-card').forEach((card) => {
-  card.addEventListener('mousemove', (event) => {
-    const rect = card.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - .5;
-    const y = (event.clientY - rect.top) / rect.height - .5;
-    card.querySelector('.work-art').style.transform = `perspective(900px) rotateY(${x * 4}deg) rotateX(${y * -4}deg) scale(.985)`;
-  });
-  card.addEventListener('mouseleave', () => card.querySelector('.work-art').style.transform = '');
+let lastTrail = 0;
+let tokenIndex = 0;
+
+window.addEventListener('pointermove', (event) => {
+  if (
+    event.pointerType === 'touch' ||
+    performance.now() - lastTrail < 65
+  ) {
+    return;
+  }
+
+  lastTrail = performance.now();
+
+  const bit = document.createElement('span');
+
+  bit.className = 'trail-bit';
+  bit.textContent =
+    trailTokens[tokenIndex++ % trailTokens.length];
+
+  bit.style.left = `${event.clientX + 10}px`;
+  bit.style.top = `${event.clientY + 8}px`;
+
+  trail.appendChild(bit);
+
+  bit.addEventListener(
+    'animationend',
+    () => bit.remove(),
+    { once: true }
+  );
 });
 
 window.addEventListener('load', () => {
   showRoute(location.hash.slice(1) || 'home', false);
-  setTimeout(() => document.querySelector('.page-wipe').classList.add('done'), 250);
+
+  setTimeout(() => {
+    document.querySelector('.page-intro').classList.add('done');
+  }, 900);
 });
