@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Emmanuel Appiadjei - creative and content marketing portfolio." />
-  <meta name="portfolio-version" content="2026.08.13.9" />
+  <meta name="portfolio-version" content="2026.08.13.11" />
   <title>Emmanuel Appiadjei - Marketing Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
   <style id="portfolio-core">
-/* Portfolio version 2026.08.13.9 - serif-led editorial typography and custom mark cursor */
+/* Portfolio version 2026.08.13.11 - unified modern sans display typography */
 :root{--blue:#1b2de2;--ink:#1b1b1b;--paper:#f7f7f4;--white:#fff;--muted:#7c7c77;--cyan:#a9d5df;--line:rgba(27,27,27,.18);--pad:clamp(22px,4.25vw,70px)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Newsreader,Georgia,serif;overflow-x:hidden}a{color:inherit;text-decoration:none}p{font-family:Inter,Arial,sans-serif}img{display:block;width:100%;height:auto;object-fit:cover}button{font:inherit}.route{display:none;min-height:100vh;padding-top:72px}.route.active{display:block;animation:page-in .45s ease both}@keyframes page-in{from{opacity:0}to{opacity:1}}
-#cursor-trail{position:fixed;inset:0;z-index:150;pointer-events:none;overflow:hidden}.trail-bit{position:fixed;font:500 9px Inter;letter-spacing:.05em;background:linear-gradient(90deg,#050505,#555,#aaa);-webkit-background-clip:text;background-clip:text;color:transparent;animation:trail-fade 1.1s ease-out forwards;white-space:nowrap}@keyframes trail-fade{to{opacity:0;transform:translate(10px,-18px)}}
+#cursor-trail{position:fixed;inset:0;z-index:150;pointer-events:none;overflow:hidden}
 .site-header{height:72px;position:fixed;inset:0 0 auto;z-index:100;background:rgba(247,247,244,.94);backdrop-filter:blur(14px);display:grid;grid-template-columns:130px 1fr 165px;align-items:stretch;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;padding-left:var(--pad);font-size:18px;font-weight:800;letter-spacing:-.07em}.brand span{font:400 7px Inter;color:var(--blue);margin:0 0 13px 4px}.site-header nav{display:flex;justify-content:center;align-items:stretch}.nav-link{display:flex;align-items:center;padding:0 clamp(16px,2.2vw,36px);font:500 10px Inter;text-transform:uppercase;position:relative}.nav-link:after{content:"";position:absolute;left:18px;right:100%;bottom:18px;height:1px;background:var(--blue);transition:.3s}.nav-link:hover:after,.nav-link.active:after{right:18px}.nav-link.active{color:var(--blue)}.header-contact{display:flex;align-items:center;justify-content:center;background:var(--ink);color:white;font:500 10px Inter;text-transform:uppercase;transition:.25s}.header-contact:hover{background:var(--blue)}.menu-button{display:none;border:0;background:transparent}
 .hero{min-height:calc(100svh - 72px);padding:28px var(--pad) 60px;display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:auto 1fr auto;gap:18px;position:relative;overflow:hidden}.hero-meta{grid-column:1/13;display:flex;justify-content:space-between;padding-bottom:13px;border-bottom:1px solid var(--line);font:400 9px Inter;letter-spacing:.12em}.hero-name{grid-column:1/13;align-self:center;color:var(--blue);font-size:clamp(70px,13vw,200px);font-weight:800;letter-spacing:-.09em;line-height:.74;position:relative;z-index:2;padding:5vw 0}.hero-name span{display:block;white-space:nowrap}.hero-name span:last-child{margin-left:12%}.hero-name sup{font:400 10px Inter;letter-spacing:0;vertical-align:top;margin-left:8px}.hero-image{margin:0;position:absolute;z-index:3;background:#d8d8d3}.hero-image img{filter:saturate(.76);transition:filter .4s,transform .6s}.hero-image:hover img{filter:saturate(1);transform:scale(1.02)}.hero-image figcaption{position:absolute;background:var(--paper);padding:8px 10px;font:400 7px Inter;letter-spacing:.06em}.hero-image-main{width:clamp(150px,18vw,280px);height:clamp(190px,24vw,370px);right:17%;top:19%}.hero-image-main figcaption{left:0;bottom:0}.hero-image-small{width:clamp(90px,10vw,155px);height:clamp(110px,13vw,200px);right:4%;bottom:14%}.hero-image-small figcaption{right:0;bottom:0}.hero-copy{grid-column:1/5;align-self:end;display:grid;grid-template-columns:90px 1fr;gap:16px;position:relative;z-index:4}.hero-copy>span{font:400 8px Inter}.hero-copy p{margin:0;font-size:clamp(14px,1.25vw,18px);line-height:1.5}.hero-copy a{grid-column:2;margin-top:20px;font:500 10px Inter;text-transform:uppercase;border-bottom:1px solid;width:max-content;padding-bottom:5px}.hero-copy b{font-size:18px;margin-left:12px}
 .home-about{background:var(--ink);color:white;padding:clamp(70px,8vw,130px) var(--pad);display:grid;grid-template-columns:1.5fr 1fr;gap:8vw;align-items:end}.home-about-title span{display:block;color:#555;font-size:clamp(54px,8vw,125px);font-weight:700;line-height:.78;letter-spacing:-.07em}.home-about-title strong{display:block;color:var(--blue);font-size:clamp(54px,8vw,125px);line-height:.78;letter-spacing:-.07em}.home-about-copy>span{font:400 9px Inter;color:#8d8d8d}.home-about-copy p{font-size:clamp(17px,1.55vw,24px);line-height:1.45;margin:38px 0}.home-about-copy a{font:500 10px Inter;border-bottom:1px solid;padding-bottom:5px}
@@ -163,9 +163,58 @@ html.custom-cursor-enabled #custom-cursor {
   }
 }
 
+/* Final type hierarchy: modern sans throughout, serif only as an accent. */
+body,
+body * {
+  font-family: Inter, Arial, sans-serif !important;
+}
+
+.hero-name {
+  font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+.home-about-title strong,
+.footer-cta > a,
+.outcome strong {
+  font-weight: 700;
+}
+
+.about-close h2 em {
+  font-family: Newsreader, Georgia, serif !important;
+  font-weight: 500;
+}
+
+#custom-cursor {
+  width: 48px;
+  height: 48px;
+}
+
+.rainbow-trail-dot {
+  position: fixed;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  pointer-events: none;
+  background: var(--trail-color);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--trail-color) 42%, transparent);
+  opacity: .28;
+  transform: translate(-50%, -50%) scale(1);
+  animation: rainbow-trail-fade .72s ease-out forwards;
+}
+
+@keyframes rainbow-trail-fade {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.2);
+  }
+}
+
   </style>
   <style id="portfolio-polish">
-    /* Release 2026.08.13.9: reveal motion and featured-card clipping fix. */
+    /* Release 2026.08.13.11: reveal motion and featured-card clipping fix. */
     .hero-image img,
     .about-photo img,
     .landing-visual img,
@@ -378,7 +427,7 @@ html.custom-cursor-enabled #custom-cursor {
   </main>
 
   <script>
-/* Portfolio version 2026.08.13.9 - navigation, custom mark cursor, and creative-marketing trail. */
+/* Portfolio version 2026.08.13.11 - navigation, custom mark cursor, and subtle rainbow trail. */
 (function () {
   'use strict';
 
@@ -390,12 +439,8 @@ html.custom-cursor-enabled #custom-cursor {
   const trail = document.querySelector('#cursor-trail');
   const customCursor = document.querySelector('#custom-cursor');
 
-  const trailTokens = [
-    'MKT_01', 'AUD_SEG', 'CTR++', 'ROI', 'EMAIL_06', '//CASE',
-    'EVT_633', '+111%', '$1.5M', 'IMP_62809', 'CTA->', 'CRM_SYNC',
-    'BRAND_MATCH', 'SOCIAL_04', 'LEAD_001', 'OPEN_RATE', 'EVENT_LIVE',
-    'CONTENT_PLAN', 'HOOK_01', 'STORY_ARC', 'CREATIVE_BRIEF', 'ASSET_12',
-    'ENG_RATE', 'POST_LIVE', 'CAMPAIGN_ID', 'MSG_TEST', 'AUD_INSIGHT'
+  const trailColors = [
+    '#ff8fa3', '#ffc56e', '#87d7ad', '#70b7ff', '#aa91ff'
   ];
 
   function showRoute(name, updateHash) {
@@ -449,16 +494,16 @@ html.custom-cursor-enabled #custom-cursor {
   let trailIndex = 0;
 
   window.addEventListener('pointermove', (event) => {
-    if (!trail || event.pointerType === 'touch' || performance.now() - lastTrailTime < 48) return;
+    if (!trail || !finePointer.matches || event.pointerType === 'touch' || performance.now() - lastTrailTime < 34) return;
     lastTrailTime = performance.now();
 
-    const token = document.createElement('span');
-    token.className = 'trail-bit';
-    token.textContent = trailTokens[trailIndex++ % trailTokens.length];
-    token.style.left = event.clientX + 12 + 'px';
-    token.style.top = event.clientY + 8 + 'px';
-    trail.appendChild(token);
-    token.addEventListener('animationend', () => token.remove(), { once: true });
+    const dot = document.createElement('span');
+    dot.className = 'rainbow-trail-dot';
+    dot.style.setProperty('--trail-color', trailColors[trailIndex++ % trailColors.length]);
+    dot.style.left = event.clientX + 'px';
+    dot.style.top = event.clientY + 'px';
+    trail.appendChild(dot);
+    dot.addEventListener('animationend', () => dot.remove(), { once: true });
   });
 
   showRoute(location.hash.slice(1) || 'home', false);
