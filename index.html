@@ -3,86 +3,225 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A curated portfolio for a brand experience and visual storyteller." />
-  <title>Your Name — Creative Portfolio</title>
+  <meta name="description" content="Emmanuel Appiadjei - creative and content marketing portfolio." />
+  <meta name="portfolio-version" content="2026.08.13.6" />
+  <title>Emmanuel Appiadjei - Marketing Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260813-6" />
+  <style id="portfolio-polish">
+    /* Release 2026.08.13.6: typography, reveal motion, and featured-card clipping fix. */
+    .hero-image img,
+    .about-photo img,
+    .landing-visual img,
+    .work-row img { height: 100%; }
+
+    .featured-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+    }
+
+    .featured-card > img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1.08;
+      object-fit: cover;
+      flex: none;
+    }
+
+    .featured-card > div {
+      min-height: 82px;
+      padding-bottom: 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .featured-card h3 { line-height: 1.15; }
+
+    .featured-card p {
+      align-self: start;
+      max-width: 145px;
+    }
+
+    #home.route.active .hero-meta,
+    #home.route.active .hero-name,
+    #home.route.active .hero-image,
+    #home.route.active .hero-copy {
+      opacity: 0;
+      animation: home-reveal 0.9s cubic-bezier(.2, .7, .25, 1) forwards;
+    }
+
+    #home.route.active .hero-meta { animation-delay: 0.08s; }
+    #home.route.active .hero-name { animation-delay: 0.2s; }
+    #home.route.active .hero-image-main { animation-delay: 0.38s; }
+    #home.route.active .hero-image-small { animation-delay: 0.52s; }
+    #home.route.active .hero-copy { animation-delay: 0.62s; }
+
+    @keyframes home-reveal {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .featured-card > div { min-height: 96px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #home.route.active .hero-meta,
+      #home.route.active .hero-name,
+      #home.route.active .hero-image,
+      #home.route.active .hero-copy {
+        opacity: 1;
+        animation: none;
+        transform: none;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="page-wipe" aria-hidden="true"><span>PORTFOLIO / 2026</span></div>
+  <div id="cursor-trail" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="monogram" href="#home" aria-label="Home">YN<span>+</span></a>
+    <a class="brand" href="#home" data-route="home" aria-label="Emmanuel Appiadjei home">EA<span>®</span></a>
     <nav aria-label="Primary navigation">
-      <a class="nav-link active" href="#home" data-route="home"><span>01</span> Home</a>
-      <a class="nav-link" href="#about" data-route="about"><span>02</span> About</a>
-      <a class="nav-link" href="#landing" data-route="landing"><span>03</span> Landing Pages</a>
-      <a class="nav-link" href="#work" data-route="work"><span>04</span> Work</a>
+      <a class="nav-link active" href="#home" data-route="home">Home</a>
+      <a class="nav-link" href="#about" data-route="about">About</a>
+      <a class="nav-link" href="#landing" data-route="landing">Landing Pages</a>
+      <a class="nav-link" href="#work" data-route="work">Work</a>
     </nav>
-    <a class="availability" href="mailto:hello@yourname.com"><i></i> Available for select projects</a>
-    <button class="menu-button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <a class="header-contact" href="mailto:youremail@example.com">Let's connect ↗</a>
+    <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <main>
     <section class="route active" id="home" data-route-panel="home">
-      <div class="hero-orbit" aria-hidden="true">
-        <div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div>
-        <div class="orbit-line"></div><div class="orbit-dot"></div>
+      <div class="hero">
+        <div class="hero-meta"><span>MARKETING + EVENTS</span><span>PORTFOLIO / 2026</span></div>
+        <div class="hero-name" aria-label="Emmanuel Appiadjei">
+          <span>EMMANUEL</span>
+          <span>APPIADJEI<sup>®</sup></span>
+        </div>
+        <figure class="hero-image hero-image-main">
+          <img src="images/hero-large.jpg" alt="Portrait of Emmanuel Appiadjei" />
+          <figcaption>MARKETING STRATEGY / AUDIENCE ENGAGEMENT</figcaption>
+        </figure>
+        <figure class="hero-image hero-image-small">
+          <img src="images/hero-small.jpg" alt="A detail from Emmanuel's work" />
+          <figcaption>EVENTS / DIGITAL / CONTENT</figcaption>
+        </figure>
+        <div class="hero-copy">
+          <span>01 / INTRODUCTION</span>
+          <p>I create audience-first marketing through content, campaigns, and experiences - shaping ideas that feel relevant, useful, and worth paying attention to.</p>
+          <a href="#work" data-route="work">Explore selected work <b>↘</b></a>
+        </div>
       </div>
-      <div class="hero-meta reveal"><span>BRAND EXPERIENCE</span><span>VISUAL STORYTELLING</span><span>CHICAGO / REMOTE</span></div>
-      <div class="hero-title" aria-label="Ideas with impact">
-        <div class="title-line"><span class="outline">IDEAS</span><span class="micro">Creative direction<br>through a human lens.</span></div>
-        <div class="title-line shift"><span>WITH</span><div class="prism" aria-hidden="true"><b></b><b></b><b></b></div></div>
-        <div class="title-line"><span class="purple">IMPACT</span><span class="year">©26</span></div>
+
+      <div class="home-about">
+        <div class="home-about-title"><span>MEET</span><strong>EMMANUEL<br>APPIADJEI</strong></div>
+        <div class="home-about-copy">
+          <span>CREATIVE + CONTENT MARKETING</span>
+          <p>My work sits where creative thinking meets marketing strategy: campaign concepts, content, audience engagement, and experiences that give people a reason to care. I’m especially interested in growing deeper into creative and content-led marketing.</p>
+          <a href="#about" data-route="about">More about my approach ↗</a>
+        </div>
       </div>
-      <div class="hero-bottom reveal">
-        <p>I shape brands, campaigns, and digital moments into experiences people actually remember.</p>
-        <a class="round-link" href="#work" data-route="work" aria-label="View selected work">↘</a>
-      </div>
-      <div class="marquee" aria-hidden="true"><div>STRATEGY ✦ DESIGN ✦ EXPERIENCES ✦ STORYTELLING ✦ STRATEGY ✦ DESIGN ✦ EXPERIENCES ✦ STORYTELLING ✦</div></div>
+
+      <section class="home-work">
+        <div class="section-heading inverse">
+          <div><span>SELECTED WORK</span><small>02 / CAMPAIGNS</small></div>
+          <h2>IDEAS THAT<br>MOVE PEOPLE.</h2>
+          <p>Content, campaigns, and event work shaped around attention, participation, and measurable results.</p>
+        </div>
+        <div class="featured-grid">
+          <a class="featured-card" href="hfma-annual.html">
+            <img src="images/project-hfma.jpg" alt="HFMA Annual marketing campaign" />
+            <div><span>01 / INTEGRATED CAMPAIGN</span><h3>HFMA Annual 2026</h3><p>$1.5M new-business outcome</p></div>
+          </a>
+          <a class="featured-card" href="family-carnival-campaign.html">
+            <img src="images/project-carnival.jpg" alt="Clarksville Family Carnival campaign" />
+            <div><span>02 / COMMUNITY MARKETING</span><h3>Family Carnival</h3><p>111% attendance growth</p></div>
+          </a>
+          <a class="featured-card" href="artist-edition-campaign.html">
+            <img src="images/project-artist-edition.jpg" alt="The Artist Edition campaign concept" />
+            <div><span>03 / CAMPAIGN CONCEPT</span><h3>The Artist Edition</h3><p>Brand partnership strategy</p></div>
+          </a>
+        </div>
+      </section>
+
+      <section class="outcomes">
+        <div class="outcome-intro"><span>03 / SELECTED OUTCOMES</span><h2>STRATEGY,<br>THEN SIGNAL.</h2></div>
+        <div class="outcome"><strong>$1.5M</strong><span>New business connected to the HFMA partner reception campaign</span></div>
+        <div class="outcome"><strong>62,809</strong><span>LinkedIn impressions during the HFMA campaign period</span></div>
+        <div class="outcome"><strong>+111%</strong><span>Year-over-year Family Carnival attendance growth</span></div>
+      </section>
+
+      <footer class="footer-cta">
+        <span>HAVE A ROLE, CAMPAIGN, OR EVENT IN MIND?</span>
+        <a href="mailto:youremail@example.com">LET'S CONNECT <b>↗</b></a>
+        <div><span>EMMANUEL APPIADJEI</span><span>MARKETING + EVENTS</span><span>UNITED STATES</span></div>
+      </footer>
     </section>
 
     <section class="route" id="about" data-route-panel="about">
-      <div class="section-index">02 / ABOUT</div>
-      <div class="about-heading"><p class="eyebrow">THE PERSON BEHIND THE PIXELS</p><h1>I turn scattered ideas into <em>clear, magnetic</em> experiences.</h1></div>
-      <div class="about-grid">
-        <div class="portrait-art" aria-label="Abstract portrait placeholder"><span>PLACE YOUR<br>PORTRAIT HERE</span><div class="portrait-ring"></div></div>
-        <div class="about-copy">
-          <p class="large-copy">I’m <strong>Your Name</strong>, a multidisciplinary creative focused on brand experience, audience engagement, and the details that make a moment feel intentional.</p>
-          <div class="copy-columns"><p>My work lives between strategy and expression—from campaign thinking and event touchpoints to digital pages that invite people in.</p><p>This template is built to grow with you. Replace the words, drop in your images, and make the system unmistakably yours.</p></div>
-          <div class="skills"><span>Art Direction</span><span>Brand Experience</span><span>Campaigns</span><span>Web Design</span><span>Events</span><span>Messaging</span></div>
-        </div>
+      <div class="route-label"><span>02 / ABOUT</span><span>BACKGROUND + APPROACH</span></div>
+      <div class="about-hero">
+        <div class="about-heading"><span>MEET</span><h1>EMMANUEL<br>APPIADJEI</h1></div>
+        <div class="about-lede"><span>CREATIVE / CONTENT / AUDIENCE</span><p>I combine organized execution with audience-focused thinking to help campaigns feel intentional from the first idea through delivery.</p></div>
+        <figure class="about-photo about-photo-one"><img src="images/hero-large.jpg" alt="Portrait of Emmanuel Appiadjei" /><figcaption>01 / WORKING</figcaption></figure>
+        <figure class="about-photo about-photo-two"><img src="images/hero-small.jpg" alt="A detail from Emmanuel's work" /><figcaption>02 / IN THE FIELD</figcaption></figure>
       </div>
-      <div class="quote-band"><span>“</span><p>Good design earns attention.<br><em>Great design creates a feeling.</em></p><small>MY CREATIVE POINT OF VIEW</small></div>
+      <div class="about-body">
+        <div class="about-statement"><span>MY APPROACH</span><h2>Clear thinking.<br>Useful creative.<br>Strong follow-through.</h2></div>
+        <div class="about-text"><p>I’m a marketing and events professional building toward the creative and content side of marketing, with experience across campaigns, audience engagement, email, social content, research, and marketing operations.</p><p>I’m strongest where strategy and creativity meet: finding the audience insight, shaping the message, developing the content, and helping teams carry a consistent story across digital and in-person touchpoints.</p></div>
+      </div>
+      <div class="capability-list">
+        <div><span>01</span><h3>Email & Digital Marketing</h3><p>Campaign structure, responsive email execution, audience lists, and post-campaign analysis.</p></div>
+        <div><span>02</span><h3>Event Marketing</h3><p>Pre-event promotion, partner communications, on-site content, and attendee engagement.</p></div>
+        <div><span>03</span><h3>Creative & Content</h3><p>Campaign concepts, social copy, visual direction, storytelling, and content coordination.</p></div>
+        <div><span>04</span><h3>Marketing Operations</h3><p>Contact organization, outreach workflows, research, reporting, and follow-up support.</p></div>
+      </div>
+      <div class="about-close"><span>THE WORK SHOULD LOOK GOOD.</span><h2>IT SHOULD ALSO<br><em>DO SOMETHING.</em></h2></div>
     </section>
 
     <section class="route" id="landing" data-route-panel="landing">
-      <div class="section-index">03 / LANDING PAGES</div>
-      <div class="project-intro"><h1>Digital spaces,<br><span>built to convert.</span></h1><p>Selected landing page concepts balancing sharp messaging, expressive visuals, and effortless movement.</p></div>
-      <div class="landing-stack">
-        <article class="landing-card lavender"><div class="card-number">01</div><div class="browser-mock"><div class="browser-top"><i></i><i></i><i></i><span>newritual.example</span></div><div class="mock-page ritual"><small>THE NEW RITUAL</small><h2>MAKE SPACE<br>FOR BETTER.</h2><button>START HERE ↗</button><div class="mock-sphere"></div></div></div><div class="card-info"><h2>New Ritual</h2><p>Wellness campaign / Strategy + web design</p><a href="#">View case study ↗</a></div></article>
-        <article class="landing-card acid"><div class="card-number">02</div><div class="browser-mock"><div class="browser-top"><i></i><i></i><i></i><span>afterhours.example</span></div><div class="mock-page after"><div class="after-tag">LIVE / CREATE / CONNECT</div><h2>AFTER<br>HOURS</h2><div class="ticket">A NIGHT FOR<br>CURIOUS MINDS<br><b>08—27—26</b></div></div></div><div class="card-info"><h2>After Hours</h2><p>Event launch / Identity + landing page</p><a href="#">View case study ↗</a></div></article>
-        <article class="landing-card dark-card"><div class="card-number">03</div><div class="browser-mock"><div class="browser-top"><i></i><i></i><i></i><span>northline.example</span></div><div class="mock-page north"><small>NORTHLINE STUDIO</small><h2>OBJECTS FOR<br>EVERYDAY RITUALS.</h2><div class="north-object"></div><button>EXPLORE COLLECTION</button></div></div><div class="card-info"><h2>Northline</h2><p>Product story / Art direction + ecommerce</p><a href="#">View case study ↗</a></div></article>
+      <div class="route-label"><span>03 / LANDING PAGES</span><span>HUBSPOT + EVENT EXPERIENCES</span></div>
+      <div class="landing-hero">
+        <h1>LANDING<br>PAGES</h1>
+        <div><span>DIGITAL TOUCHPOINTS</span><p>Focused pages designed to make event information clear, support registration, and move the right audience toward action.</p></div>
+      </div>
+      <div class="landing-projects">
+        <article class="landing-item">
+          <span class="project-number">01</span>
+          <a class="landing-visual" href="landing-mahjong-social.html"><img src="images/project-mahjong.jpg" alt="Mahjong Social landing page" /></a>
+          <div class="landing-info"><span>EVENT LANDING PAGE / HUBSPOT</span><h2>Mahjong Social</h2><p>Revecore x SmarterDX</p><p class="detail">An RSVP-focused event page built in HubSpot for a networking experience, balancing partner visibility with a simple registration path.</p><a href="landing-mahjong-social.html">View project ↗</a></div>
+        </article>
+        <article class="landing-item">
+          <span class="project-number">02</span>
+          <a class="landing-visual" href="landing-executive-dinner.html"><img src="images/project-exec-dinner.jpg" alt="Revecore Executive Dinner landing page" /></a>
+          <div class="landing-info"><span>INVITATION EXPERIENCE / CONCEPT</span><h2>Executive Dinner</h2><p>The Charles / Dallas</p><p class="detail">A refined landing-page concept for an invitation-only executive dinner, designed around concise information and a premium event tone.</p><a href="landing-executive-dinner.html">View project ↗</a></div>
+        </article>
+        <article class="landing-item placeholder-item">
+          <span class="project-number">03</span>
+          <div class="landing-placeholder"><span>NEXT<br>PROJECT</span><small>IMAGE / SCREENSHOT</small></div>
+          <div class="landing-info"><span>YOUR NEXT CASE STUDY</span><h2>Project Name</h2><p>Client / Campaign</p><p class="detail">Use this slot for another landing page, registration experience, or conversion-focused campaign page.</p><a href="#">Add project ↗</a></div>
+        </article>
       </div>
     </section>
 
     <section class="route" id="work" data-route-panel="work">
-      <div class="section-index">04 / SELECTED WORK</div>
-      <div class="work-title"><h1>A CURATED<br>SELECTION OF<br><span>GOOD TROUBLE.</span></h1><p>Brand systems, campaigns, events, and experiments created to move an audience—not just fill a feed.</p></div>
-      <div class="work-grid">
-        <article class="work-card wide card-purple" tabindex="0"><div class="work-art art-one"><span class="giant">01</span><div class="chrome-word">SIGNAL</div><i></i></div><div class="work-label"><span>CAMPAIGN / 2026</span><h2>Signal / Noise</h2><b>↗</b></div></article>
-        <article class="work-card tall card-white" tabindex="0"><div class="work-art art-two"><div class="poster">IN<br>GOOD<br>COMPANY<span>✦</span></div></div><div class="work-label"><span>EVENT EXPERIENCE / 2025</span><h2>In Good Company</h2><b>↗</b></div></article>
-        <article class="work-card card-black" tabindex="0"><div class="work-art art-three"><div class="rings"></div><p>THE IDEAS<br>BETWEEN US</p></div><div class="work-label"><span>BRAND PLATFORM / 2025</span><h2>Common Thread</h2><b>↗</b></div></article>
-        <article class="work-card wide card-silver" tabindex="0"><div class="work-art art-four"><div class="ribbon">MAKE<br>ROOM</div><div class="metal-orb"></div></div><div class="work-label"><span>DIGITAL / 2024</span><h2>Make Room</h2><b>↗</b></div></article>
+      <div class="route-label"><span>04 / WORK</span><span>CAMPAIGNS + EXPERIENCES</span></div>
+      <div class="work-hero"><h1>SELECTED<br>WORK</h1><p>A mix of real-world marketing outcomes and speculative campaign thinking. Each case study makes the role, challenge, approach, and result easy to scan.</p></div>
+      <div class="work-list">
+        <a class="work-row" href="hfma-annual.html"><span class="work-no">01</span><img src="images/project-hfma.jpg" alt="HFMA Annual campaign" /><div><span>INTEGRATED MARKETING / 2026</span><h2>HFMA Annual Marketing Campaign</h2><p>Email marketing · Digital strategy · Event experience · Marketing operations</p></div><strong>$1.5M ↗</strong></a>
+        <a class="work-row" href="family-carnival-campaign.html"><span class="work-no">02</span><img src="images/project-carnival.jpg" alt="Family Carnival campaign" /><div><span>COMMUNITY MARKETING / 2025</span><h2>Clarksville Family Carnival</h2><p>Social content · Photography · Vendor outreach · Event promotion</p></div><strong>+111% ↗</strong></a>
+        <a class="work-row" href="artist-edition-campaign.html"><span class="work-no">03</span><img src="images/project-artist-edition.jpg" alt="The Artist Edition campaign" /><div><span>SPECULATIVE CAMPAIGN</span><h2>The Artist Edition</h2><p>Brand partnership · Audience strategy · Artist collaboration · Launch concept</p></div><strong>CASE ↗</strong></a>
+        <a class="work-row" href="valentino-bad-bunny-campaign.html"><span class="work-no">04</span><img src="images/project-santo-sol.jpg" alt="Santo Sol campaign" /><div><span>SPECULATIVE CAMPAIGN</span><h2>Santo Sol</h2><p>Luxury positioning · Cultural insight · Collaboration strategy · Fragrance concept</p></div><strong>CASE ↗</strong></a>
       </div>
-      <div class="contact-panel"><small>HAVE A PROJECT IN MIND?</small><a href="mailto:hello@yourname.com">LET’S MAKE<br>SOMETHING <em>MOVE.</em><span>↗</span></a><div class="contact-meta"><span>hello@yourname.com</span><span>LinkedIn / Instagram</span><span>Chicago, IL / Remote</span></div></div>
+      <footer class="footer-cta blue-footer"><span>MARKETING WITH A POINT OF VIEW.</span><a href="mailto:youremail@example.com">LET'S CONNECT <b>↗</b></a><div><span>EMMANUEL APPIADJEI</span><span>MARKETING + EVENTS</span><span>UNITED STATES</span></div></footer>
     </section>
   </main>
 
-  <script type="module" src="script.js"></script>
+  <script src="script.js?v=20260813-6" defer></script>
 </body>
 </html>
