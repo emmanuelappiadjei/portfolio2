@@ -1,4 +1,4 @@
-/* Portfolio version 2026.08.13.6 - navigation and creative-marketing trail. */
+/* Portfolio version 2026.08.13.7 - navigation and creative-marketing trail. */
 (function () {
   'use strict';
 
