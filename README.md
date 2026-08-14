@@ -1,6 +1,6 @@
 # Emmanuel Appiadjei Portfolio — Restored Multi-Page Release
 
-Release: **2026.08.14.3**
+Release: **2026.08.14.4**
 
 This package restores the complete v13 visual direction and applies it consistently to the four supplied campaign case studies.
 
@@ -32,13 +32,12 @@ The case studies now share one responsive hero, content grid, capabilities syste
 - `landing-mahjong-social.html` — includes the matching RSVP email preview
 - `mahjong-email-preview.html`
 - `landing-executive-dinner.html`
-- `santo-sol-landing.html` — linked from both Landing Pages and the Santo Sol case study
 
 ## GitHub upload
 
 Upload every item in this folder to the repository root together:
 
-- all nine HTML files
+- all eight HTML files
 - `styles.css`
 - `script.js`
 - the complete `images` folder
