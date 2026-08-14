@@ -1,4 +1,4 @@
-/* Portfolio version 2026.08.14.1 - restored v13 system with unified case studies */
+/* Portfolio version 2026.08.14.3 - raised campaign imagery and larger home portrait */
 :root{--blue:#1b2de2;--ink:#1b1b1b;--paper:#f7f7f4;--white:#fff;--muted:#7c7c77;--cyan:#a9d5df;--line:rgba(27,27,27,.18);--pad:clamp(22px,4.25vw,70px)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}p{font-family:Inter,Arial,sans-serif}img{display:block;width:100%;height:auto;object-fit:cover}button{font:inherit}.route{display:none;min-height:100vh;padding-top:72px}.route.active{display:block;animation:page-in .45s ease both}@keyframes page-in{from{opacity:0}to{opacity:1}}
 #cursor-trail{position:fixed;inset:0;z-index:150;pointer-events:none;overflow:hidden}
@@ -257,6 +257,28 @@ html.custom-cursor-enabled #custom-cursor {
   padding-bottom: clamp(55px, 7vw, 95px);
 }
 
+.case-page .case-photo {
+  position: relative;
+  z-index: 3;
+  margin-top: -52px;
+  padding: 0 var(--pad) clamp(55px, 7vw, 100px);
+}
+
+.case-page .case-photo figure {
+  width: min(1080px, 78vw);
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #eef0ff;
+  border: 1px solid rgba(27,45,226,.14);
+}
+
+.case-page .case-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .case-page .case-press-links {
   grid-column: 2 / span 2;
 }
@@ -386,7 +408,7 @@ h3,
 }
 
 .hero-name {
-  max-width: calc(100% - clamp(320px, 24vw, 480px));
+  max-width: calc(100% - clamp(300px, 22vw, 440px));
   font-size: clamp(68px, 10vw, 165px);
   letter-spacing: -.075em;
   line-height: .78;
@@ -403,10 +425,10 @@ h3,
 }
 
 .hero-image-main {
-  width: clamp(170px, 16vw, 260px);
-  height: clamp(220px, 22vw, 350px);
-  right: 6%;
-  top: 25%;
+  width: clamp(220px, 19vw, 340px);
+  height: clamp(290px, 26vw, 450px);
+  right: 4%;
+  top: 19%;
 }
 
 .hero-image-small {
@@ -462,6 +484,15 @@ h3,
 }
 
 @media (max-width: 900px) {
+  .case-page .case-photo {
+    margin-top: -28px;
+    padding: 0 22px 50px;
+  }
+
+  .case-page .case-photo figure {
+    width: 100%;
+  }
+
   .hero-name {
     max-width: none;
     font-size: 18vw;
@@ -470,10 +501,10 @@ h3,
   }
 
   .hero-image-main {
-    width: 38vw;
-    height: 48vw;
+    width: 43vw;
+    height: 55vw;
     right: 5%;
-    top: 43%;
+    top: 40%;
   }
 
   .hero-image-small {

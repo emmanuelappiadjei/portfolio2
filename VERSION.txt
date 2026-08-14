@@ -1,10 +1,10 @@
 EMMANUEL APPIADJEI PORTFOLIO
-Release: 2026.08.14.1
+Release: 2026.08.14.3
 Design baseline: restored v13
 
 Required shared files:
-- styles.css?v=20260814-1
-- script.js?v=20260814-1
+- styles.css?v=20260814-3
+- script.js?v=20260814-3
 - images/
 
 Pages:
@@ -13,3 +13,7 @@ Pages:
 - family-carnival-campaign.html
 - artist-edition-campaign.html
 - valentino-bad-bunny-campaign.html
+- landing-mahjong-social.html
+- mahjong-email-preview.html
+- landing-executive-dinner.html
+- santo-sol-landing.html

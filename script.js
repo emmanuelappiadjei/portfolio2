@@ -1,4 +1,4 @@
-/* Portfolio version 2026.08.14.1 - navigation, custom cursor, and subtle rainbow trail. */
+/* Portfolio version 2026.08.14.3 - navigation, custom cursor, and subtle rainbow trail. */
 (function () {
   'use strict';
 
