@@ -1,0 +1,15 @@
+EMMANUEL APPIADJEI PORTFOLIO
+Release: 2026.08.14.1
+Design baseline: restored v13
+
+Required shared files:
+- styles.css?v=20260814-1
+- script.js?v=20260814-1
+- images/
+
+Pages:
+- index.html
+- hfma-annual.html
+- family-carnival-campaign.html
+- artist-edition-campaign.html
+- valentino-bad-bunny-campaign.html

@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="portfolio-version" content="2026.08.14.1" />
   <title>HFMA Annual 2026 Marketing Campaign | Emmanuel Appiadjei</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260814-1" />
 </head>
-<body>
+<body class="case-page">
+  <img id="custom-cursor" src="images/ea-mark.png" alt="" aria-hidden="true" />
+  <div id="cursor-trail" aria-hidden="true"></div>
 
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Emmanuel Appiadjei home"><img class="brand-logo" src="images/ea-mark.png" alt="" /></a>
@@ -20,6 +23,7 @@
       <a class="nav-link active" href="index.html#work">Work</a>
     </nav>
     <a class="header-contact" href="mailto:youremail@example.com">Let's connect ↗</a>
+    <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <main>
@@ -58,14 +62,14 @@
       <div class="outcome"><strong>~15x</strong><span>The team suite photo's engagement vs. the account's usual post performance</span></div>
     </section>
 
-    <div class="landing-projects">
+    <div class="landing-projects case-gallery">
       <article class="landing-item">
         <span class="project-number">05</span>
-        <a class="landing-visual" href="images/hfma-1.jpg"><img src="images/hfma-1.jpg" alt="Revecore private suite setup at HFMA Annual" /></a>
+        <a class="landing-visual" href="images/project-hfma.jpg"><img src="images/project-hfma.jpg" alt="HFMA Annual integrated marketing campaign visual" /></a>
         <div class="landing-info">
-          <span>THE SUITE / THE RECEPTION</span>
-          <h2>On-Site Gallery</h2>
-          <p class="detail">The private suite and partner reception that carried the campaign's messaging from inbox to in-person.</p>
+          <span>INTEGRATED CAMPAIGN / HFMA ANNUAL</span>
+          <h2>Campaign Visual</h2>
+          <p class="detail">A visual anchor for the campaign story connecting digital outreach, conference presence, and the partner reception.</p>
         </div>
       </article>
     </div>
@@ -82,5 +86,6 @@
     <div><span>EMMANUEL APPIADJEI</span><span>MARKETING + EVENTS</span><span>UNITED STATES</span></div>
   </footer>
 
+  <script src="script.js?v=20260814-1" defer></script>
 </body>
 </html>

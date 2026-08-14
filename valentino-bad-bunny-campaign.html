@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="portfolio-version" content="2026.08.14.1" />
   <title>Santo Sol — Valentino x Bad Bunny | Emmanuel Appiadjei</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    .canva-embed { position: relative; width: 100%; height: 0; padding-top: 56.25%; margin: 0 var(--pad) 60px; overflow: hidden; border: 1px solid var(--line); }
-    .canva-embed iframe { position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; }
-  </style>
+  <link rel="stylesheet" href="styles.css?v=20260814-1" />
 </head>
-<body>
+<body class="case-page">
+  <img id="custom-cursor" src="images/ea-mark.png" alt="" aria-hidden="true" />
+  <div id="cursor-trail" aria-hidden="true"></div>
 
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Emmanuel Appiadjei home"><img class="brand-logo" src="images/ea-mark.png" alt="" /></a>
@@ -24,6 +23,7 @@
       <a class="nav-link active" href="index.html#work">Work</a>
     </nav>
     <a class="header-contact" href="mailto:youremail@example.com">Let's connect ↗</a>
+    <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <main>
@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <div style="padding: 0 var(--pad) 20px;">
+    <div class="case-media">
       <div class="canva-embed">
         <iframe loading="lazy" src="https://www.canva.com/design/DAHQOukQoh8/_NCdlS4SZ2cGrai4uS754A/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
       </div>
@@ -80,5 +80,6 @@
     <div><span>EMMANUEL APPIADJEI</span><span>MARKETING + EVENTS</span><span>UNITED STATES</span></div>
   </footer>
 
+  <script src="script.js?v=20260814-1" defer></script>
 </body>
 </html>

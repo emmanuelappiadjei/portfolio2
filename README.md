@@ -1,25 +1,37 @@
-# Abstract Portfolio Template
+# Emmanuel Appiadjei Portfolio — Restored Multi-Page Release
 
-A responsive, GitHub Pages-ready portfolio with four SPA-style tabs: Home, About, Landing Pages, and Work. It uses only HTML, CSS, and vanilla JavaScript—no build step required.
+Release: **2026.08.14.1**
 
-## Customize
+This package restores the complete v13 visual direction and applies it consistently to the four supplied campaign case studies.
 
-1. Replace `Your Name`, `YN`, email, social links, and location in `index.html`.
-2. Rewrite the project names and descriptions to match your work.
-3. Replace the abstract portrait block or project artwork with your own images. Add images to an `assets` folder, then use `<img>` elements or `background-image` in `styles.css`.
-4. Change the core palette at the top of `styles.css` under `:root`.
+## Restored v13 system
 
-## Publish with GitHub Pages
+- Inter sans-serif throughout
+- restrained blue, off-white, and pale-blue color blocking
+- minimal black sections except the final black contact footer
+- protected hero-name spacing beside the portrait
+- top-left EA logo and smaller EA custom cursor
+- subtle rainbow-dot cursor trail with no text trail
+- responsive navigation and homepage reveal motion
+- no extra EA mark beside the hero name
+- no “PORTFOLIO / 2026” hero label
 
-1. Create a new GitHub repository and upload these files.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the `main` branch and `/ (root)`, then save.
+## Rebuilt case studies
 
-Your site will be available at `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`.
+- `hfma-annual.html`
+- `family-carnival-campaign.html`
+- `artist-edition-campaign.html`
+- `valentino-bad-bunny-campaign.html`
 
-## Notes
+The case studies now share one responsive hero, content grid, capabilities system, results section, media treatment, and footer. Their supplied writing and campaign details were preserved.
 
-- Keyboard navigation and reduced-motion preferences are supported.
-- The Google font requires internet access. To make the site fully offline, download Manrope and DM Mono and serve them locally.
-- All project visuals are original CSS artwork and safe to replace with your own portfolio images.
+## GitHub upload
+
+Upload every item in this folder to the repository root together:
+
+- all five HTML files
+- `styles.css`
+- `script.js`
+- the complete `images` folder
+
+Use **Add file → Upload files** rather than pasting CSS or JavaScript into GitHub's browser editor.

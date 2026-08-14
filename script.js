@@ -1,4 +1,4 @@
-/* Portfolio version 2026.08.13.7 - navigation and creative-marketing trail. */
+/* Portfolio version 2026.08.14.1 - navigation, custom cursor, and subtle rainbow trail. */
 (function () {
   'use strict';
 
@@ -8,13 +8,10 @@
   const nav = document.querySelector('.site-header nav');
   const menu = document.querySelector('.menu-button');
   const trail = document.querySelector('#cursor-trail');
+  const customCursor = document.querySelector('#custom-cursor');
 
-  const trailTokens = [
-    'MKT_01', 'AUD_SEG', 'CTR++', 'ROI', 'EMAIL_06', '//CASE',
-    'EVT_633', '+111%', '$1.5M', 'IMP_62809', 'CTA->', 'CRM_SYNC',
-    'BRAND_MATCH', 'SOCIAL_04', 'LEAD_001', 'OPEN_RATE', 'EVENT_LIVE',
-    'CONTENT_PLAN', 'HOOK_01', 'STORY_ARC', 'CREATIVE_BRIEF', 'ASSET_12',
-    'ENG_RATE', 'POST_LIVE', 'CAMPAIGN_ID', 'MSG_TEST', 'AUD_INSIGHT'
+  const trailColors = [
+    '#ff8fa3', '#ffc56e', '#87d7ad', '#70b7ff', '#aa91ff'
   ];
 
   function showRoute(name, updateHash) {
@@ -46,20 +43,38 @@
 
   window.addEventListener('popstate', () => showRoute(location.hash.slice(1) || 'home', false));
 
+  const finePointer = window.matchMedia('(pointer: fine) and (hover: hover)');
+
+  if (customCursor && finePointer.matches) {
+    document.documentElement.classList.add('custom-cursor-enabled');
+
+    window.addEventListener('pointermove', (event) => {
+      if (event.pointerType === 'touch') return;
+      customCursor.style.left = event.clientX + 'px';
+      customCursor.style.top = event.clientY + 'px';
+      customCursor.classList.add('is-visible');
+      const target = event.target instanceof Element ? event.target : null;
+      customCursor.classList.toggle('is-interactive', Boolean(target && target.closest('a, button')));
+    });
+
+    document.documentElement.addEventListener('mouseleave', () => customCursor.classList.remove('is-visible'));
+    document.documentElement.addEventListener('mouseenter', () => customCursor.classList.add('is-visible'));
+  }
+
   let lastTrailTime = 0;
   let trailIndex = 0;
 
   window.addEventListener('pointermove', (event) => {
-    if (!trail || event.pointerType === 'touch' || performance.now() - lastTrailTime < 48) return;
+    if (!trail || !finePointer.matches || event.pointerType === 'touch' || performance.now() - lastTrailTime < 34) return;
     lastTrailTime = performance.now();
 
-    const token = document.createElement('span');
-    token.className = 'trail-bit';
-    token.textContent = trailTokens[trailIndex++ % trailTokens.length];
-    token.style.left = event.clientX + 12 + 'px';
-    token.style.top = event.clientY + 8 + 'px';
-    trail.appendChild(token);
-    token.addEventListener('animationend', () => token.remove(), { once: true });
+    const dot = document.createElement('span');
+    dot.className = 'rainbow-trail-dot';
+    dot.style.setProperty('--trail-color', trailColors[trailIndex++ % trailColors.length]);
+    dot.style.left = event.clientX + 'px';
+    dot.style.top = event.clientY + 'px';
+    trail.appendChild(dot);
+    dot.addEventListener('animationend', () => dot.remove(), { once: true });
   });
 
   showRoute(location.hash.slice(1) || 'home', false);

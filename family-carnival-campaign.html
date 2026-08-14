@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="portfolio-version" content="2026.08.14.1" />
   <title>Clarksville Family Carnival Marketing Campaign | Emmanuel Appiadjei</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260814-1" />
 </head>
-<body>
+<body class="case-page">
+  <img id="custom-cursor" src="images/ea-mark.png" alt="" aria-hidden="true" />
+  <div id="cursor-trail" aria-hidden="true"></div>
 
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Emmanuel Appiadjei home"><img class="brand-logo" src="images/ea-mark.png" alt="" /></a>
@@ -20,6 +23,7 @@
       <a class="nav-link active" href="index.html#work">Work</a>
     </nav>
     <a class="header-contact" href="mailto:youremail@example.com">Let's connect ↗</a>
+    <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <main>
@@ -58,19 +62,16 @@
       <div class="outcome"><strong>3</strong><span>Community partners featured on-site: U.S. Bank, American Red Cross, Operation Stand Down</span></div>
     </section>
 
-    <div class="featured-grid" style="padding: 0 var(--pad) 60px;">
-      <a class="featured-card" href="images/carnival-1.jpg" target="_blank" rel="noopener">
-        <img src="images/carnival-1.jpg" alt="Kids playing a carnival game at the Clarksville Family Carnival" />
-        <div><span>ON-SITE</span><h3>Carnival Games</h3><p></p></div>
-      </a>
-      <a class="featured-card" href="images/carnival-2.jpg" target="_blank" rel="noopener">
-        <img src="images/carnival-2.jpg" alt="Operation Stand Down vendor booth" />
-        <div><span>PARTNERS</span><h3>Vendor Booths</h3><p></p></div>
-      </a>
-      <a class="featured-card" href="images/carnival-3.jpg" target="_blank" rel="noopener">
-        <img src="images/carnival-3.jpg" alt="Staff and kids at a carnival game booth" />
-        <div><span>COMMUNITY</span><h3>Family Turnout</h3><p></p></div>
-      </a>
+    <div class="landing-projects case-gallery">
+      <article class="landing-item">
+        <span class="project-number">05</span>
+        <a class="landing-visual" href="images/project-carnival.jpg" target="_blank" rel="noopener"><img src="images/project-carnival.jpg" alt="Clarksville Family Carnival campaign visual" /></a>
+        <div class="landing-info">
+          <span>COMMUNITY / CONTENT / EVENT</span>
+          <h2>Campaign Visual</h2>
+          <p class="detail">A visual anchor for the social content, partner storytelling, photography, and family turnout behind the campaign.</p>
+        </div>
+      </article>
     </div>
 
     <div class="about-close">
@@ -81,7 +82,7 @@
     <div class="landing-projects">
       <article class="landing-item">
         <span class="project-number">→</span>
-        <div class="landing-info" style="grid-column: 2 / span 2;">
+        <div class="landing-info case-press-links">
           <p class="detail">
             <a href="https://clarksvillenow.com/local/steven-a-cohen-military-family-clinic-at-centerstone-to-host-month-of-military-child-carnival/" target="_blank" rel="noopener">Clarksville Now ↗</a>
             &nbsp; &nbsp;
@@ -98,5 +99,6 @@
     <div><span>EMMANUEL APPIADJEI</span><span>MARKETING + EVENTS</span><span>UNITED STATES</span></div>
   </footer>
 
+  <script src="script.js?v=20260814-1" defer></script>
 </body>
 </html>
