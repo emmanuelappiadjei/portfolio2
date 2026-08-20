@@ -1,4 +1,4 @@
-/* Portfolio version 2026.08.14.4 - raised campaign imagery and larger home portrait */
+/* Portfolio version 2026.08.20.3 - raised campaign imagery and larger home portrait */
 :root{--blue:#1b2de2;--ink:#1b1b1b;--paper:#f7f7f4;--white:#fff;--muted:#7c7c77;--cyan:#a9d5df;--line:rgba(27,27,27,.18);--pad:clamp(22px,4.25vw,70px)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}p{font-family:Inter,Arial,sans-serif}img{display:block;width:100%;height:auto;object-fit:cover}button{font:inherit}.route{display:none;min-height:100vh;padding-top:72px}.route.active{display:block;animation:page-in .45s ease both}@keyframes page-in{from{opacity:0}to{opacity:1}}
 #cursor-trail{position:fixed;inset:0;z-index:150;pointer-events:none;overflow:hidden}
@@ -142,6 +142,188 @@ html.custom-cursor-enabled #custom-cursor {
   .brand-logo {
     width: 50px;
     height: 50px;
+  }
+}
+
+/* Email portfolio page. */
+.site-header .nav-link {
+  padding-left: clamp(10px, 1.55vw, 26px);
+  padding-right: clamp(10px, 1.55vw, 26px);
+}
+
+.emails-page main {
+  padding-top: 72px;
+}
+
+.emails-hero {
+  min-height: 500px;
+  padding: clamp(70px, 8vw, 125px) var(--pad);
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 7vw;
+  align-items: end;
+  background: #eef0ff;
+  border-bottom: 1px solid rgba(27,45,226,.14);
+}
+
+.emails-hero h1 {
+  margin: 0;
+  color: var(--blue);
+  font-size: clamp(82px, 14vw, 210px);
+  font-weight: 800;
+  line-height: .72;
+  letter-spacing: -.09em;
+}
+
+.emails-hero > div span {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .1em;
+}
+
+.emails-hero > div p {
+  margin: 25px 0 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.email-list {
+  padding: 0 var(--pad) clamp(80px, 9vw, 145px);
+}
+
+.email-entry {
+  display: grid;
+  grid-template-columns: minmax(240px, .7fr) minmax(0, 1.5fr);
+  gap: clamp(35px, 6vw, 100px);
+  padding: clamp(65px, 8vw, 125px) 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+}
+
+.email-entry:first-child {
+  border-top: 0;
+}
+
+.email-entry-copy {
+  position: sticky;
+  top: 112px;
+  padding-top: 4px;
+}
+
+.email-number {
+  display: block;
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+
+.email-entry-copy h2 {
+  margin: 18px 0 26px;
+  font-size: clamp(42px, 5.3vw, 78px);
+  font-weight: 700;
+  line-height: .9;
+  letter-spacing: -.065em;
+}
+
+.email-entry-copy > p {
+  max-width: 420px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.email-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 30px 0 34px;
+}
+
+.email-tags span {
+  padding: 8px 12px;
+  border: 1px solid rgba(27,45,226,.22);
+  border-radius: 999px;
+  color: var(--blue);
+  background: #f4f5ff;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.email-entry-copy > a {
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--ink);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.email-frame {
+  height: min(790px, 78vh);
+  min-height: 590px;
+  overflow: hidden;
+  background: #e8e8e5;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 70px rgba(27,45,226,.08);
+}
+
+.email-frame-tall {
+  height: min(880px, 82vh);
+  width: min(100%, 520px);
+  justify-self: center;
+}
+
+.email-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: white;
+}
+
+@media (max-width: 900px) {
+  .emails-page main {
+    padding-top: 64px;
+  }
+
+  .emails-hero,
+  .email-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .emails-hero {
+    min-height: 430px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .emails-hero > div {
+    max-width: 520px;
+  }
+
+  .email-list {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .email-entry-copy {
+    position: static;
+  }
+
+  .email-frame,
+  .email-frame-tall {
+    height: 690px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .email-frame,
+  .email-frame-tall {
+    height: 620px;
   }
 }
 

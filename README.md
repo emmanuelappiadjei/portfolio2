@@ -1,6 +1,6 @@
 # Emmanuel Appiadjei Portfolio — Restored Multi-Page Release
 
-Release: **2026.08.14.4**
+Release: **2026.08.20.3**
 
 This package restores the complete v13 visual direction and applies it consistently to the four supplied campaign case studies.
 
@@ -33,11 +33,22 @@ The case studies now share one responsive hero, content grid, capabilities syste
 - `mahjong-email-preview.html`
 - `landing-executive-dinner.html`
 
+## Email portfolio
+
+- `emails.html` — top-level Emails page with three embedded previews
+- `email-peacefest.html` — festival promotional email
+- `email-peacegrounds.html` — lifecycle/product email using the supplied image set
+- `email-hfma-track.html` — static portfolio preview of the supplied HubSpot event email
+
+HFMA email image files use replacement-friendly names: `email-hfma-saratoga.jpg`, `email-hfma-kevin.jpg`, and `email-hfma-patrick.jpg`.
+
+The Peacefest preview is displayed at its native 341-pixel width so browsers do not enlarge and blur the supplied artwork.
+
 ## GitHub upload
 
 Upload every item in this folder to the repository root together:
 
-- all eight HTML files
+- all twelve HTML files
 - `styles.css`
 - `script.js`
 - the complete `images` folder
