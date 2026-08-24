@@ -1,6 +1,6 @@
 # Emmanuel Appiadjei Portfolio — Restored Multi-Page Release
 
-Release: **2026.08.24.1**
+Release: **2026.08.20.3**
 
 This package restores the complete v13 visual direction and applies it consistently to the four supplied campaign case studies.
 
@@ -32,9 +32,6 @@ The case studies now share one responsive hero, content grid, capabilities syste
 - `landing-mahjong-social.html` — includes the matching RSVP email preview
 - `mahjong-email-preview.html`
 - `landing-executive-dinner.html`
-- `landing-peacefest.html` — standalone Peacefest festival page with video hero, lineup, experience, event details, and ticket calls to action
-
-The supplied Peacefest ZIP included the video, poster, and logo but not the twelve artist and experience photos referenced by its HTML. Replacement-ready fallback files are included in `images/peacefest/`; overwrite those matching filenames when the final photos are ready.
 
 ## Email portfolio
 
@@ -51,7 +48,7 @@ The Peacefest preview is displayed at its native 341-pixel width so browsers do 
 
 Upload every item in this folder to the repository root together:
 
-- all thirteen HTML files
+- all twelve HTML files
 - `styles.css`
 - `script.js`
 - the complete `images` folder
