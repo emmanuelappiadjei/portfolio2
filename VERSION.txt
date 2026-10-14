@@ -1,22 +1,18 @@
 EMMANUEL APPIADJEI PORTFOLIO
-Release: 2026.08.20.3
-Design baseline: restored v13
+Release: 4.0.0 — heat (poster hero with the REACH word and Nashville skyline, stacked work cards,
+         full-length page and email wall, photo pile about, Archivo throughout)
+Direction: flame-to-ember gradient sheets for the hero and close, near-black page between;
+           one family (Archivo) across its width axis; plain text links, no pills
 
-Required shared files:
-- styles.css?v=20260820-3
-- script.js?v=20260820-3
-- images/
+Stack: static HTML + CSS + JS, no runtime dependencies.
+Build: node tools/build.mjs   (renders shared partials from assets/data/site.json)
+Check: node tools/check.mjs   (links, assets, anchors, ids, alt text)
 
 Pages:
-- index.html
-- hfma-annual.html
-- family-carnival-campaign.html
-- artist-edition-campaign.html
-- valentino-bad-bunny-campaign.html
-- landing-mahjong-social.html
-- mahjong-email-preview.html
-- landing-executive-dinner.html
-- emails.html
-- email-peacefest.html
-- email-peacegrounds.html
-- email-hfma-track.html
+- index.html, work.html, landing-pages.html, emails.html, about.html, contact.html
+- hfma-annual.html, family-carnival-campaign.html,
+  artist-edition-campaign.html, valentino-bad-bunny-campaign.html
+- landing-mahjong-social.html, landing-executive-dinner.html,
+  landing-peacefest.html, peace-grounds.html, santo-sol-landing.html
+- email-peacefest.html, email-peacegrounds.html, email-hfma-track.html,
+  mahjong-email-preview.html
